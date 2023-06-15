@@ -12,9 +12,11 @@ inputElement.addEventListener('keyup', function(event) {
     
     //itemTag.appendChild(itemValue);
     
-    
+    const lineBreak = document.createElement('br');
     resultElement.append(item);
     resultElement.append(label);
+    resultElement.append(lineBreak);
+    
     // resultElement.append("<br>");
     inputElement.value = "";
   }
