@@ -1,3 +1,33 @@
+// // Define the data
+const data = {
+  users: [
+    { name: 'John Doe', email: 'john@example.com' },
+    { name: 'Jane Smith', email: 'jane@example.com' },
+    // ... more user data
+  ]
+};
+
+// Render the template with data
+
+// const greetingTemplate = `
+//     <h1>Hello, <%= name %>!</h1>
+// `;
+
+// const name = "John";
+// const renderedGreeting = ejs.render(greetingTemplate, { name });
+// document.getElementById("placeholderBox").innerHTML = renderedGreeting;
+
+const renderedHtml = ejs.renderFile('./templates/products.ejs', data, function(err, html) {
+  if (err) {
+    console.error(err);
+  } else {
+    // Use the rendered HTML
+    document.getElementById('placeholderBox').innerHTML = html;
+  }
+});
+
+// renderedHtml();
+
 const updateProductListing = async () => {
   console.log(await getProducts());
   const {products} = await getProducts();

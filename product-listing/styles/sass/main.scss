@@ -1,0 +1,41 @@
+#searchResults img{
+  width: 200px;
+  height: 200px;
+}
+
+.result-container{
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  gap: 5px;
+}
+
+.container-item{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+@media only screen and (max-width: 768px) {
+  .result-container{
+    grid-template-columns: auto auto;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  /* body{
+    background : #eee;
+  } */
+
+  .result-container{
+    grid-template-columns: auto auto auto;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  .result-container{
+    grid-template-columns: auto auto auto auto;
+  }
+}
