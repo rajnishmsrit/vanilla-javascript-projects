@@ -1,12 +1,14 @@
 const updateProductListing = async () => {
-  const {drinks} = await getData();
+  console.log(await getProducts());
+  const {products} = await getProducts();
   const resultsId = document.getElementById("searchResults");
-  drinks.map((item) => {
+  products.map((item) => {
     const productDiv = document.createElement("div");
+    productDiv.classList.add("container-item");
     const productImageElement = document.createElement("img");
-    productImageElement.src = item.strDrinkThumb;
+    productImageElement.src = item.thumbnail;
     const productLabelElement = document.createElement("label");
-    const productLabelTextElement = document.createTextNode(item.strDrink);
+    const productLabelTextElement = document.createTextNode(item.title);
     const productBreakElement = document.createElement("br")
     productLabelElement.append(productLabelTextElement);
     productDiv.append(productImageElement);
@@ -15,5 +17,4 @@ const updateProductListing = async () => {
     resultsId.append(productDiv);
   })
 }
-
 updateProductListing();
