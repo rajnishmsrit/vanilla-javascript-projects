@@ -5,7 +5,7 @@ inputElement.addEventListener('keyup', function(event) {
     const resultElement = document.getElementById("todo-result");
     const item = document.createElement("input");
     item.type = 'checkbox';
-    item.value = 'example value';
+    item.value = inputElement.value;
     const textNode = document.createTextNode(inputElement.value);
     const label = document.createElement("label");
     label.appendChild(textNode);
