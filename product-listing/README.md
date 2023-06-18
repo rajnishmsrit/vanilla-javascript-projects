@@ -3,7 +3,7 @@
 # try with inner HTML DONE
 # responsiveness - media queries DONE
 # sass implementation DONE
-# try with a html template language
+# try with a html template language DONE
 # tooling with gulp (minify everything etc)
 # fetch and store this data in local storage
 # do manipulations - crud operations
